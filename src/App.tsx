@@ -15,7 +15,7 @@ function App() {
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetBottom = offsetTop + element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(section);
             break;
@@ -52,18 +52,17 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-bold text-xl text-gray-900">Saad Ashraf</div>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-colors duration-200 ${
-                    activeSection === item.id
+                  className={`text-sm font-medium transition-colors duration-200 ${activeSection === item.id
                       ? 'text-blue-600'
                       : 'text-gray-700 hover:text-blue-600'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -90,11 +89,10 @@ function App() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 ${
-                    activeSection === item.id
+                  className={`block w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 ${activeSection === item.id
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -114,19 +112,19 @@ function App() {
                 <span className="text-blue-600 block">Frontend Developer</span>
               </h1>
               <p className="mt-6 text-xl text-gray-600 leading-relaxed">
-                Computer Science student passionate about creating beautiful and responsive user interfaces. 
-                Specializing in modern frontend technologies with a background in backend development 
+                Computer Science student passionate about creating beautiful and responsive user interfaces.
+                Specializing in modern frontend technologies with a background in backend development
                 and continuously learning new skills.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
                 >
                   Get In Touch
                   <Mail size={18} />
                 </button>
-                <a 
+                <a
                   href="https://github.com/matteoashraf"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -140,15 +138,16 @@ function App() {
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="relative">
                 <div className="w-80 h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gray-100">
-                  <img 
-                    src="/profile(1).jpg" 
-                    alt="Saad Ashraf - Frontend Developer" 
+                  <img
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
+                    alt="Saad Ashraf - Frontend Developer"
                     className="w-full h-full object-cover object-center"
                     style={{
                       filter: 'contrast(1.1) brightness(1.05)',
                       objectPosition: 'center top'
                     }}
                   />
+
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
                   <Code size={32} className="text-white" />
@@ -168,23 +167,23 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A passionate Computer Science student specializing in frontend development 
+              A passionate Computer Science student specializing in frontend development
               with a background in backend technologies.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Currently pursuing a Bachelor's degree in Computer Science at The Egyptian E-Learning University 
-                (Alexandria University), I'm passionate about creating beautiful and intuitive user interfaces. 
-                My focus is on frontend development using modern frameworks like React and Angular, with a solid 
+                Currently pursuing a Bachelor's degree in Computer Science at The Egyptian E-Learning University
+                (Alexandria University), I'm passionate about creating beautiful and intuitive user interfaces.
+                My focus is on frontend development using modern frameworks like React and Angular, with a solid
                 background in backend technologies that I'm still learning.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                I believe in continuous learning and staying updated with the latest frontend technologies. 
-                My projects demonstrate my ability to create responsive, user-friendly applications with clean, 
+                I believe in continuous learning and staying updated with the latest frontend technologies.
+                My projects demonstrate my ability to create responsive, user-friendly applications with clean,
                 maintainable code and excellent user experience.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -256,7 +255,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Bachelor's Degree in Computer Science</h3>
                   <p className="text-blue-600 font-medium text-lg mb-2">The Egyptian E-Learning University - Alexandria University</p>
                   <p className="text-gray-500 mb-4">Sep 2022 – Jun 2025 | Alexandria, Egypt</p>
-                  
+
                   <h4 className="font-semibold text-gray-900 mb-4">Relevant Coursework:</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     {[
@@ -298,7 +297,7 @@ function App() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Fokir Personal Portfolio Website</h3>
                 <p className="text-gray-500 text-sm mb-3">Jan 2024</p>
                 <p className="text-gray-600 mb-4">
-                  Modern personal portfolio website featuring responsive design, interactive elements, 
+                  Modern personal portfolio website featuring responsive design, interactive elements,
                   and a sleek UI to showcase professional skills and projects.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -314,7 +313,7 @@ function App() {
                   <p>• Contact form with styled inputs</p>
                 </div>
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href="https://matteoashraf.github.io/Fokir/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -322,7 +321,7 @@ function App() {
                   >
                     Live Demo <ExternalLink size={16} />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/matteoashraf/Fokir"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -343,7 +342,7 @@ function App() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">DevFolio - Professional Developer Portfolio</h3>
                 <p className="text-gray-500 text-sm mb-3">May 2024</p>
                 <p className="text-gray-600 mb-4">
-                  Modern responsive portfolio template for developers featuring clean design, 
+                  Modern responsive portfolio template for developers featuring clean design,
                   interactive components, and comprehensive project showcase sections.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -359,7 +358,7 @@ function App() {
                   <p>• Dual-panel contact layout (form + information)</p>
                 </div>
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href="https://matteoashraf.github.io/DevFolio/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -367,7 +366,7 @@ function App() {
                   >
                     Live Demo <ExternalLink size={16} />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/matteoashraf/DevFolio"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -388,7 +387,7 @@ function App() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Random Quote Generator</h3>
                 <p className="text-gray-500 text-sm mb-3">Jun 2024</p>
                 <p className="text-gray-600 mb-4">
-                  Lightweight web application that displays inspirational quotes with a clean, 
+                  Lightweight web application that displays inspirational quotes with a clean,
                   responsive interface and intelligent quote rotation.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -404,7 +403,7 @@ function App() {
                   <p>• Author attribution with proper formatting</p>
                 </div>
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href="https://matteoashraf.github.io/Quote-generator/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -412,7 +411,7 @@ function App() {
                   >
                     Live Demo <ExternalLink size={16} />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/matteoashraf/Quote-generator"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -433,7 +432,7 @@ function App() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Bookmarker - Web Bookmark Manager</h3>
                 <p className="text-gray-500 text-sm mb-3">Jun 2024</p>
                 <p className="text-gray-600 mb-4">
-                  Web application for saving and managing bookmarks with local storage persistence 
+                  Web application for saving and managing bookmarks with local storage persistence
                   and input validation.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -449,7 +448,7 @@ function App() {
                   <p>• Custom modal for validation error explanations</p>
                 </div>
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href="https://matteoashraf.github.io/Bookmark/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -457,7 +456,7 @@ function App() {
                   >
                     Live Demo <ExternalLink size={16} />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/matteoashraf/Bookmark"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -478,7 +477,7 @@ function App() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">BookingLuxe Website</h3>
                 <p className="text-gray-500 text-sm mb-3">Jul 2023</p>
                 <p className="text-gray-600 mb-4">
-                  Responsive travel booking platform with seamless cross-device compatibility 
+                  Responsive travel booking platform with seamless cross-device compatibility
                   and interactive UI components for enhanced user experience.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -493,7 +492,7 @@ function App() {
                   <p>• Cross-device compatibility</p>
                 </div>
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href="https://matteoashraf.github.io/Booking-website/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -501,7 +500,7 @@ function App() {
                   >
                     Live Demo <ExternalLink size={16} />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/matteoashraf/Booking-website"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -522,7 +521,7 @@ function App() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Employee Management System</h3>
                 <p className="text-gray-500 text-sm mb-3">Apr 2024</p>
                 <p className="text-gray-600 mb-4">
-                  Java desktop application with full CRUD functionality for managing employee records, 
+                  Java desktop application with full CRUD functionality for managing employee records,
                   featuring MySQL database integration and normalized schema design.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -567,8 +566,8 @@ function App() {
                       <span className="text-blue-600 font-medium">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000" 
+                      <div
+                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -593,8 +592,8 @@ function App() {
                       <span className="text-blue-600 font-medium">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000" 
+                      <div
+                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -619,8 +618,8 @@ function App() {
                       <span className="text-blue-600 font-medium">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000" 
+                      <div
+                        className="bg-blue-600 h-2 rounded-full transition-all duration-1000"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -723,7 +722,7 @@ function App() {
               <div className="mt-8">
                 <h4 className="font-semibold text-gray-900 mb-4">Connect with me</h4>
                 <div className="flex gap-4">
-                  <a 
+                  <a
                     href="https://linkedin.com/in/saad-ashraf-208425321"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -731,7 +730,7 @@ function App() {
                   >
                     <Linkedin size={20} />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/matteoashraf"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -749,16 +748,16 @@ function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                       placeholder="Your first name"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                       placeholder="Your last name"
                     />
@@ -766,29 +765,29 @@ function App() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     placeholder="Message subject"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
+                  <textarea
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     placeholder="Your message..."
                   ></textarea>
                 </div>
-                <button 
+                <button
                   type="submit"
                   className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
                 >
@@ -809,7 +808,7 @@ function App() {
               Frontend Developer | Computer Science Student | Continuous Learner
             </p>
             <div className="flex justify-center gap-6 mb-8">
-              <a 
+              <a
                 href="https://linkedin.com/in/saad-ashraf-208425321"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -817,7 +816,7 @@ function App() {
               >
                 <Linkedin size={24} />
               </a>
-              <a 
+              <a
                 href="https://github.com/matteoashraf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -825,7 +824,7 @@ function App() {
               >
                 <Github size={24} />
               </a>
-              <a 
+              <a
                 href="mailto:matteoashraf4@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
